@@ -38,6 +38,10 @@ public enum State {
     public State next(Roll roll) {
       throw new IllegalStateException("This method can't be invoked when in the POINT state.");
     }
+    @Override
+    public boolean isTerminal() {
+      return false;
+    }
   };
 
 

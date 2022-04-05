@@ -16,6 +16,10 @@ public enum State {
       }
       return next;
     }
+    @Override
+    public boolean isTerminal() {
+      return false;
+    }
   },
   WIN,
   LOSS,
@@ -47,5 +51,9 @@ public enum State {
 
   public static State initial() {
     return State.COME_OUT;
+  }
+
+  public boolean isTerminal() {
+    return true;
   }
 }
